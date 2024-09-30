@@ -1,4 +1,6 @@
-console.log("Ejercicios asincronismo")
+// Optimización de index.js
+// Los ejercicios se muestran por consola en ordenconsole.log("Ejercicios asincronismo")
+
 console.log();
 
 const piValidValue = 3.14
@@ -7,7 +9,7 @@ const valor = 9
 
 function exampleAsync(valor) {
     return new Promise((resolve) => {
-    setTimeout(() => {resolve(valor + 1)}, 1000)
+    setTimeout( () => {resolve(valor + 1)}, 1000 )
     });
 }
 
@@ -17,6 +19,7 @@ async function invokeExampleAsync() {
     console.log("Ejercicio 1")
 
     // Invocación usando promesas
+
     // await exampleAsync(9).then((res) => {
     //     console.log("RESULTADO USANDO PROMESA: ", res)
     // });
@@ -24,6 +27,7 @@ async function invokeExampleAsync() {
     .then( (res) => console.log("RESULTADO USANDO PROMESA: ", res) );
     
     // Invocación usando asunc/await
+
     // await (async () => {
     //     const resultAsyncAwait = await exampleAsync(9);
     //     console.log("RESULTADO USANDO ASYNC/AWAIT: ", resultAsyncAwait);
@@ -59,11 +63,11 @@ function invokeOperation() {
 
     operation(piValidValue)
     .then((res) => console.log("Válido! ", res))
-    .catch((err) => console.log(err))
+    .catch( (err) => console.log(err) )
 
     operation(piWrongValue)
-    .then((res)=> console.log(res))
-    .catch((err)=> console.log("No válido! ", err))
+    .then( (res)=> console.log(res) )
+    .catch( (err)=> console.log("No válido! ", err) )
 }
 
 
